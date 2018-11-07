@@ -1,0 +1,6 @@
+.stack-work/
+lazy-toy.cabal
+*.hi
+*.o
+error.log
+*~

@@ -1,0 +1,52 @@
+name:                lazy-toy
+version:             0.1.0.0
+github:              "nobsun/lazy-toy"
+license:             BSD3
+author:              "Nobuo Yamashita"
+maintainer:          "nobsun@gmail.com"
+copyright:           "Copyright: (c) 2018 Nobuo Yamashita"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Experiment
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/nobsun/lazy-toy#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- unicode-show >= 0.1.0.3
+- markdown-unlit >= 0.5.0
+- doctest >= 0.15.0
+- hspec >= 2.5.5
+
+library:
+  source-dirs: src
+
+executables:
+  lazy-toy-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+#    - -threaded
+    - -rtsopts
+#    - -with-rtsopts=-N
+    dependencies:
+    - lazy-toy
+
+tests:
+  lazy-toy-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+#    - -threaded
+    - -rtsopts
+#    - -with-rtsopts=-N
+    dependencies:
+    - lazy-toy
