@@ -25,6 +25,8 @@ dependencies:
 - markdown-unlit >= 0.5.0
 - doctest >= 0.15.0
 - hspec >= 2.5.5
+- mtl
+- free >= 5.0.2
 
 library:
   source-dirs: src
