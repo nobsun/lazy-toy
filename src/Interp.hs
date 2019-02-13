@@ -5,8 +5,7 @@ import Data.Maybe
 import Expr
 import Normalize
 import Value
-import Env (Env)
-import Env hiding (Env)
+import Env
 
 interp :: Expr -> Env -> Com Value
 interp expr ρ = case expr of
